@@ -892,7 +892,7 @@ PreparedStatement pst=null;
         
         int p = JOptionPane.showConfirmDialog(null, "Are you sure you want to add record?","Add Record",JOptionPane.YES_NO_OPTION);
         if(p==0){
-
+              deleteRecords("Deductions",txt_id.getText());
               String value3 = lbl_emp.getText();
             try {
 
@@ -1269,6 +1269,29 @@ PreparedStatement pst=null;
                 new employeeDeductions().setVisible(true);
             }
         });
+    }
+    
+    private void deleteRecords(String tbl,String id){
+        
+            
+                try{
+                    String reg= "delete from "+tbl+" where emp_id = "+id;
+                pst=conn.prepareStatement(reg);
+                pst.execute();
+                }catch(Exception e){
+                    
+                }
+                finally{
+                    try{
+                        rs.close();
+                        pst.close();
+                    }catch(Exception e)
+                    {
+                        
+                    }
+                }
+            
+                
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
