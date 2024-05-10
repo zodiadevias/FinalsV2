@@ -229,6 +229,7 @@ PreparedStatement pst=null;
         );
 
         txt_med.setText("0");
+        txt_med.setNextFocusableComponent(txt_bonus);
         txt_med.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_medActionPerformed(evt);
@@ -236,6 +237,7 @@ PreparedStatement pst=null;
         });
 
         txt_bonus.setText("0");
+        txt_bonus.setNextFocusableComponent(txt_other);
 
         txt_other.setText("0");
 
@@ -249,6 +251,7 @@ PreparedStatement pst=null;
         jLabel13.setText("Please enter the amounts");
 
         txt_hw.setText("0");
+        txt_hw.setNextFocusableComponent(txt_med);
 
         jLabel4.setText("Overtime :");
 

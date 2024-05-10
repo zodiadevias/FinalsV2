@@ -112,6 +112,11 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(txtpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 209, 136, -1));
 
         cmbdivision.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employee", "Admin" }));
+        cmbdivision.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cmbdivisionKeyPressed(evt);
+            }
+        });
         getContentPane().add(cmbdivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(202, 237, 136, -1));
 
         jLabel5.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 36)); // NOI18N
@@ -164,6 +169,13 @@ public class Login extends javax.swing.JFrame {
             Log_in();
         }
     }//GEN-LAST:event_btnloginKeyPressed
+
+    private void cmbdivisionKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbdivisionKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            Log_in();
+        }
+    }//GEN-LAST:event_cmbdivisionKeyPressed
 
     /**
      * @param args the command line arguments
