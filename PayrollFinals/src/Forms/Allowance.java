@@ -36,7 +36,7 @@ PreparedStatement pst=null;
     public Allowance() {
         initComponents();
         conn=db.java_db();
-        Update_table();
+        
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width/2 - getWidth()/2, 
@@ -50,7 +50,8 @@ PreparedStatement pst=null;
     }
        private void Update_table() {
     try{
-        String sql ="select * from allowance";
+        String id = txt_empid.getText();
+        String sql ="select * from allowance where emp_id = "+id;
         pst=conn.prepareStatement(sql);
         rs=pst.executeQuery();
         table_allowance.setModel(DbUtils.resultSetToTableModel(rs));
@@ -131,6 +132,11 @@ PreparedStatement pst=null;
         setResizable(false);
 
         txt_empid.setEditable(false);
+        txt_empid.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_empidActionPerformed(evt);
+            }
+        });
 
         txt_dob.setEditable(false);
 
@@ -154,6 +160,11 @@ PreparedStatement pst=null;
         txt_dept.setEditable(false);
 
         txt_surname.setEditable(false);
+        txt_surname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_surnameActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("Department :");
 
@@ -546,6 +557,7 @@ PreparedStatement pst=null;
 
             }
         }
+        Update_table();
     }//GEN-LAST:event_txt_searchKeyReleased
 
     private void txt_salaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_salaryActionPerformed
@@ -710,6 +722,14 @@ PreparedStatement pst=null;
     private void txt_total_overtimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_total_overtimeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_total_overtimeActionPerformed
+
+    private void txt_surnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_surnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_surnameActionPerformed
+
+    private void txt_empidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_empidActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_empidActionPerformed
 
     /**
      * @param args the command line arguments
