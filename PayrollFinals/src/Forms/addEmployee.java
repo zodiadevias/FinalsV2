@@ -41,6 +41,7 @@ PreparedStatement pst=null;
         setLocation(size.width/2 - getWidth()/2, 
         size.height/2 - getHeight()/2);
         currentDate();
+        txt_firstname.requestFocus();
         
         txt_emp.setText(String.valueOf(employee.empID).toString());
     }
@@ -156,12 +157,22 @@ PreparedStatement pst=null;
                 r_maleActionPerformed(evt);
             }
         });
+        r_male.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                r_maleKeyPressed(evt);
+            }
+        });
 
         r_female.setText("Female");
         r_female.setNextFocusableComponent(txt_email);
         r_female.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 r_femaleActionPerformed(evt);
+            }
+        });
+        r_female.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                r_femaleKeyPressed(evt);
             }
         });
 
@@ -183,6 +194,7 @@ PreparedStatement pst=null;
         });
 
         txt_id.setEditable(false);
+        txt_id.setEnabled(false);
         txt_id.setNextFocusableComponent(txt_firstname);
         txt_id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +202,7 @@ PreparedStatement pst=null;
             }
         });
 
-        jLabel5.setText("Employee id :");
+        jLabel5.setText("Employee ID :");
 
         jDesktopPane1.setLayer(img, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -587,6 +599,22 @@ PreparedStatement pst=null;
             addRecord();
         }
     }//GEN-LAST:event_cmd_saveKeyPressed
+
+    private void r_maleKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_r_maleKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            r_male.setSelected(true);
+            r_female.setSelected(false);
+        }
+    }//GEN-LAST:event_r_maleKeyPressed
+
+    private void r_femaleKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_r_femaleKeyPressed
+        // TODO add your handling code here:
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+            r_female.setSelected(true);
+            r_male.setSelected(false);
+        }
+    }//GEN-LAST:event_r_femaleKeyPressed
 
     
     
