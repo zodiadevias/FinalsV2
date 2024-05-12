@@ -250,6 +250,11 @@ PreparedStatement pst=null;
             }
         });
 
+        txt_reason.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_reasonMouseClicked(evt);
+            }
+        });
         txt_reason.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_reasonKeyReleased(evt);
@@ -282,6 +287,11 @@ PreparedStatement pst=null;
         txt_deduction.setEditable(false);
         txt_deduction.setText("0");
         txt_deduction.setEnabled(false);
+        txt_deduction.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_deductionMouseClicked(evt);
+            }
+        });
         txt_deduction.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deductionKeyReleased(evt);
@@ -291,6 +301,11 @@ PreparedStatement pst=null;
         txt_percentage.setEditable(false);
         txt_percentage.setText("0");
         txt_percentage.setEnabled(false);
+        txt_percentage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_percentageMouseClicked(evt);
+            }
+        });
         txt_percentage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_percentageActionPerformed(evt);
@@ -337,6 +352,11 @@ PreparedStatement pst=null;
         txt_deduction1.setEditable(false);
         txt_deduction1.setText("0");
         txt_deduction1.setEnabled(false);
+        txt_deduction1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_deduction1MouseClicked(evt);
+            }
+        });
         txt_deduction1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction1KeyReleased(evt);
@@ -348,6 +368,11 @@ PreparedStatement pst=null;
         txt_percentage1.setEditable(false);
         txt_percentage1.setText("0");
         txt_percentage1.setEnabled(false);
+        txt_percentage1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_percentage1MouseClicked(evt);
+            }
+        });
         txt_percentage1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage1KeyReleased(evt);
@@ -375,6 +400,11 @@ PreparedStatement pst=null;
         txt_deduction2.setEditable(false);
         txt_deduction2.setText("0");
         txt_deduction2.setEnabled(false);
+        txt_deduction2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_deduction2MouseClicked(evt);
+            }
+        });
         txt_deduction2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction2KeyReleased(evt);
@@ -386,6 +416,11 @@ PreparedStatement pst=null;
         txt_percentage2.setEditable(false);
         txt_percentage2.setText("0");
         txt_percentage2.setEnabled(false);
+        txt_percentage2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_percentage2MouseClicked(evt);
+            }
+        });
         txt_percentage2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage2KeyReleased(evt);
@@ -413,6 +448,11 @@ PreparedStatement pst=null;
         txt_deduction3.setEditable(false);
         txt_deduction3.setText("0");
         txt_deduction3.setEnabled(false);
+        txt_deduction3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_deduction3MouseClicked(evt);
+            }
+        });
         txt_deduction3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction3KeyReleased(evt);
@@ -424,6 +464,11 @@ PreparedStatement pst=null;
         txt_percentage3.setEditable(false);
         txt_percentage3.setText("0");
         txt_percentage3.setEnabled(false);
+        txt_percentage3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_percentage3MouseClicked(evt);
+            }
+        });
         txt_percentage3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage3KeyReleased(evt);
@@ -463,6 +508,11 @@ PreparedStatement pst=null;
         txt_deduction4.setEditable(false);
         txt_deduction4.setText("0");
         txt_deduction4.setEnabled(false);
+        txt_deduction4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_deduction4MouseClicked(evt);
+            }
+        });
         txt_deduction4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction4KeyReleased(evt);
@@ -472,6 +522,11 @@ PreparedStatement pst=null;
         txt_percentage4.setEditable(false);
         txt_percentage4.setText("0");
         txt_percentage4.setEnabled(false);
+        txt_percentage4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_percentage4MouseClicked(evt);
+            }
+        });
         txt_percentage4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage4KeyReleased(evt);
@@ -584,7 +639,7 @@ PreparedStatement pst=null;
                                         .addComponent(jLabel30)))
                                 .addContainerGap())
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1258,6 +1313,61 @@ PreparedStatement pst=null;
         // TODO add your handling code here:
         txt_Save.setEnabled(false);
     }//GEN-LAST:event_txt_reasonKeyReleased
+
+    private void txt_percentageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_percentageMouseClicked
+        // TODO add your handling code here:
+        txt_percentage.selectAll();
+    }//GEN-LAST:event_txt_percentageMouseClicked
+
+    private void txt_deductionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_deductionMouseClicked
+        // TODO add your handling code here:
+        txt_deduction.selectAll();
+    }//GEN-LAST:event_txt_deductionMouseClicked
+
+    private void txt_percentage1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_percentage1MouseClicked
+        // TODO add your handling code here:
+        txt_percentage1.selectAll();
+    }//GEN-LAST:event_txt_percentage1MouseClicked
+
+    private void txt_deduction1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_deduction1MouseClicked
+        // TODO add your handling code here:
+        txt_deduction1.selectAll();
+    }//GEN-LAST:event_txt_deduction1MouseClicked
+
+    private void txt_percentage2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_percentage2MouseClicked
+        // TODO add your handling code here:
+        txt_percentage2.selectAll();
+    }//GEN-LAST:event_txt_percentage2MouseClicked
+
+    private void txt_deduction2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_deduction2MouseClicked
+        // TODO add your handling code here:
+        txt_deduction2.selectAll();
+    }//GEN-LAST:event_txt_deduction2MouseClicked
+
+    private void txt_percentage3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_percentage3MouseClicked
+        // TODO add your handling code here:
+        txt_percentage3.selectAll();
+    }//GEN-LAST:event_txt_percentage3MouseClicked
+
+    private void txt_deduction3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_deduction3MouseClicked
+        // TODO add your handling code here:
+        txt_deduction3.selectAll();
+    }//GEN-LAST:event_txt_deduction3MouseClicked
+
+    private void txt_percentage4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_percentage4MouseClicked
+        // TODO add your handling code here:
+        txt_percentage4.selectAll();
+    }//GEN-LAST:event_txt_percentage4MouseClicked
+
+    private void txt_deduction4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_deduction4MouseClicked
+        // TODO add your handling code here:
+        txt_deduction4.selectAll();
+    }//GEN-LAST:event_txt_deduction4MouseClicked
+
+    private void txt_reasonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_reasonMouseClicked
+        // TODO add your handling code here:
+        txt_reason.selectAll();
+    }//GEN-LAST:event_txt_reasonMouseClicked
 
     /**
      * @param args the command line arguments
