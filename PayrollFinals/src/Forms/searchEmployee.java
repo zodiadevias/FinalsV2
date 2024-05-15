@@ -158,6 +158,9 @@ private void Update_table() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_searchKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_searchKeyTyped(evt);
+            }
         });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -605,7 +608,7 @@ private void Update_table() {
                 lbl_img.setIcon(imageIcon);
 
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Missing Data");
+            
         }
         finally {
 
@@ -831,6 +834,14 @@ private void Update_table() {
         EmployeeList a = new EmployeeList();
         a.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void txt_searchKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!Character.isDigit(a)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_searchKeyTyped
 
     /**
      * @param args the command line arguments

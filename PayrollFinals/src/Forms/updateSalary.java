@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -93,6 +94,9 @@ PreparedStatement pst=null;
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_searchKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_searchKeyTyped(evt);
+            }
         });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -163,9 +167,19 @@ PreparedStatement pst=null;
 
         txt_dept1.setEditable(false);
         txt_dept1.setEnabled(false);
+        txt_dept1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dept1KeyTyped(evt);
+            }
+        });
 
         txt_dept2.setEditable(false);
         txt_dept2.setEnabled(false);
+        txt_dept2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dept2KeyTyped(evt);
+            }
+        });
 
         jLabel6.setText("Percentage :");
 
@@ -468,6 +482,30 @@ PreparedStatement pst=null;
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txt_dept1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dept1KeyTyped
+        // TODO add your handling code here:
+       char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dept1KeyTyped
+
+    private void txt_dept2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dept2KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dept2KeyTyped
+
+    private void txt_searchKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!Character.isDigit(a)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_searchKeyTyped
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,7 @@ import Forms.db;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -58,7 +59,7 @@ PreparedStatement pst=null;
         table_allowance.setModel(DbUtils.resultSetToTableModel(rs));
     }
     catch(Exception e){
-    JOptionPane.showMessageDialog(null, e);
+    
     }
     finally {
             
@@ -242,6 +243,11 @@ PreparedStatement pst=null;
                 txt_medActionPerformed(evt);
             }
         });
+        txt_med.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_medKeyTyped(evt);
+            }
+        });
 
         txt_bonus.setText("0");
         txt_bonus.setNextFocusableComponent(txt_other);
@@ -250,11 +256,21 @@ PreparedStatement pst=null;
                 txt_bonusMouseClicked(evt);
             }
         });
+        txt_bonus.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_bonusKeyTyped(evt);
+            }
+        });
 
         txt_other.setText("0");
         txt_other.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txt_otherMouseClicked(evt);
+            }
+        });
+        txt_other.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_otherKeyTyped(evt);
             }
         });
 
@@ -272,6 +288,11 @@ PreparedStatement pst=null;
         txt_hw.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txt_hwMouseClicked(evt);
+            }
+        });
+        txt_hw.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_hwKeyTyped(evt);
             }
         });
 
@@ -386,6 +407,9 @@ PreparedStatement pst=null;
         txt_search.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_searchKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_searchKeyTyped(evt);
             }
         });
 
@@ -775,6 +799,46 @@ PreparedStatement pst=null;
         // TODO add your handling code here:
         txt_other.selectAll();
     }//GEN-LAST:event_txt_otherMouseClicked
+
+    private void txt_hwKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_hwKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_hwKeyTyped
+
+    private void txt_searchKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_searchKeyTyped
+
+    private void txt_medKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_medKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_medKeyTyped
+
+    private void txt_bonusKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_bonusKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_bonusKeyTyped
+
+    private void txt_otherKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_otherKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_otherKeyTyped
 
     /**
      * @param args the command line arguments

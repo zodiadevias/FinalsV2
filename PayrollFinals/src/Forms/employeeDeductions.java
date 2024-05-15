@@ -4,6 +4,7 @@ import Forms.employee;
 import Forms.db;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -143,6 +144,9 @@ PreparedStatement pst=null;
         txt_search.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_searchKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_searchKeyTyped(evt);
             }
         });
 
@@ -296,6 +300,9 @@ PreparedStatement pst=null;
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deductionKeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_deductionKeyTyped(evt);
+            }
         });
 
         txt_percentage.setEditable(false);
@@ -317,6 +324,9 @@ PreparedStatement pst=null;
             }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentageKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_percentageKeyTyped(evt);
             }
         });
 
@@ -361,6 +371,9 @@ PreparedStatement pst=null;
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction1KeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_deduction1KeyTyped(evt);
+            }
         });
 
         jLabel21.setText("Amount:");
@@ -376,6 +389,9 @@ PreparedStatement pst=null;
         txt_percentage1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage1KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_percentage1KeyTyped(evt);
             }
         });
 
@@ -409,6 +425,9 @@ PreparedStatement pst=null;
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction2KeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_deduction2KeyTyped(evt);
+            }
         });
 
         jLabel24.setText("Amount:");
@@ -424,6 +443,9 @@ PreparedStatement pst=null;
         txt_percentage2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage2KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_percentage2KeyTyped(evt);
             }
         });
 
@@ -457,6 +479,9 @@ PreparedStatement pst=null;
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction3KeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_deduction3KeyTyped(evt);
+            }
         });
 
         jLabel27.setText("Amount:");
@@ -472,6 +497,9 @@ PreparedStatement pst=null;
         txt_percentage3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage3KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_percentage3KeyTyped(evt);
             }
         });
 
@@ -517,6 +545,9 @@ PreparedStatement pst=null;
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_deduction4KeyReleased(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_deduction4KeyTyped(evt);
+            }
         });
 
         txt_percentage4.setEditable(false);
@@ -530,6 +561,9 @@ PreparedStatement pst=null;
         txt_percentage4.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txt_percentage4KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_percentage4KeyTyped(evt);
             }
         });
 
@@ -935,7 +969,7 @@ PreparedStatement pst=null;
             txt_desig.setText(add17);
 
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "No Data");
+            
         }
         finally {
 
@@ -1369,6 +1403,94 @@ PreparedStatement pst=null;
         txt_reason.selectAll();
     }//GEN-LAST:event_txt_reasonMouseClicked
 
+    private void txt_searchKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_searchKeyTyped
+
+    private void txt_percentageKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_percentageKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_percentageKeyTyped
+
+    private void txt_deductionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_deductionKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_deductionKeyTyped
+
+    private void txt_percentage1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_percentage1KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_percentage1KeyTyped
+
+    private void txt_deduction1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_deduction1KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_deduction1KeyTyped
+
+    private void txt_percentage2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_percentage2KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_percentage2KeyTyped
+
+    private void txt_deduction2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_deduction2KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_deduction2KeyTyped
+
+    private void txt_percentage3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_percentage3KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_percentage3KeyTyped
+
+    private void txt_deduction3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_deduction3KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_deduction3KeyTyped
+
+    private void txt_percentage4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_percentage4KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_percentage4KeyTyped
+
+    private void txt_deduction4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_deduction4KeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_deduction4KeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -1437,7 +1559,7 @@ PreparedStatement pst=null;
         tbl_deduct.setModel(DbUtils.resultSetToTableModel(rs));
     }
     catch(Exception e){
-    JOptionPane.showMessageDialog(null, e);
+    
     }
     finally {
             

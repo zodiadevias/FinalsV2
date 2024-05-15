@@ -268,6 +268,11 @@ PreparedStatement pst=null;
                 txt_salaryActionPerformed(evt);
             }
         });
+        txt_salary.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_salaryKeyTyped(evt);
+            }
+        });
 
         cmd_save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Save-icon.png"))); // NOI18N
         cmd_save.setText("Add Record");
@@ -615,6 +620,14 @@ PreparedStatement pst=null;
             r_male.setSelected(false);
         }
     }//GEN-LAST:event_r_femaleKeyPressed
+
+    private void txt_salaryKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_salaryKeyTyped
+        // TODO add your handling code here:
+        char a = evt.getKeyChar();
+        if(!(a == KeyEvent.VK_PERIOD) && !(Character.isDigit(a))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_salaryKeyTyped
 
     
     
