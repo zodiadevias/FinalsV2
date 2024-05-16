@@ -399,6 +399,11 @@ PreparedStatement pst=null;
                 txt_searchComponentRemoved(evt);
             }
         });
+        txt_search.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txt_searchMouseClicked(evt);
+            }
+        });
         txt_search.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_searchActionPerformed(evt);
@@ -616,7 +621,7 @@ PreparedStatement pst=null;
     private void txt_calActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_calActionPerformed
         // TODO add your handling code here:
         
-        int salary = Integer.parseInt(txt_salary.getText());
+        double salary = Double.parseDouble(txt_salary.getText());
         int overtime = Integer.parseInt(txt_hw.getText());
 
         double eight = 8;
@@ -839,6 +844,11 @@ PreparedStatement pst=null;
             evt.consume();
         }
     }//GEN-LAST:event_txt_otherKeyTyped
+
+    private void txt_searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_searchMouseClicked
+        // TODO add your handling code here:
+        txt_search.selectAll();
+    }//GEN-LAST:event_txt_searchMouseClicked
 
     /**
      * @param args the command line arguments
