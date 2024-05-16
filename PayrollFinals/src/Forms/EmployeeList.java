@@ -70,6 +70,7 @@ public class EmployeeList extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Employee List");
+        setResizable(false);
 
         tbl_emplist.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
